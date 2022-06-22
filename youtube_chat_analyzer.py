@@ -5,7 +5,7 @@ from graph_painter import graph_painter
 def analyze():
     video_id: str = input("please type youtube video id: ")
     keywords = list(input(
-        "Type keywords that you want to match. Separate each keyword into spaces. It doesn't matter whether it's lowercase or uppercase.\nex) lol yabe lmao\n* Type enter to keep the default setting(lmao lol lewd yabe)\n").split())
+        "Type keywords that you want to match, make sure separate each keyword into spaces. Case insensitive.\nex) lol yabe lmao\n* Type enter in order to keep the default setting(lmao lol lewd yabe)\n").split())
     try:
         chat = pytchat.create(video_id=video_id)
     except:
