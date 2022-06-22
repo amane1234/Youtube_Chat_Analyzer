@@ -10,14 +10,15 @@ class graph_painter:
 
     def __init__(self, chat: pytchat, keywords: list = None):
         self.chat = chat
-        self.chat.get()  # 첫 데이터 버림
+        self.chat.get()  # Get rid of First data
         self.acc = self.getHighlightScore(self.chat.get().items)
         self.count = 1
         self.x = []
         self.y_highlight_score = []
         self.y_avg = []
-        self.y_avg_15 = []  # 1.15배
-        self.y_avg_2 = []  # 1.2배
+        self.y_avg_15 = []  # 1.15 times
+        self.y_avg_2 = []  # 1.2 times
+        self.y_avg_3 = []  # 1.3 times
         self.ani = FuncAnimation(plt.gcf(), self.animate, interval=100)
         if keywords:
             self.keywords = keywords
@@ -45,6 +46,7 @@ class graph_painter:
         self.y_avg.append(avg)
         self.y_avg_15.append(avg * 1.15)
         self.y_avg_2.append(avg * 1.2)
+        self.y_avg_3.append(avg * 1.3)
         self.acc += score
         self.count += 1
         plt.cla()
@@ -56,6 +58,7 @@ class graph_painter:
         plt.plot(self.x, self.y_avg, label='avg')
         plt.plot(self.x, self.y_avg_15, label='avg * 1.15')
         plt.plot(self.x, self.y_avg_2, label='avg * 1.2')
+        plt.plot(self.x, self.y_avg_3, label='avg * 1.3')
 
         plt.gcf().autofmt_xdate()
         plt.legend()
