@@ -23,14 +23,13 @@ class graph_painter:
         if keywords:
             self.keywords = keywords
         print("Applied keywords : " + str(self.keywords))
-        print("적용된 키워드 : " + str(self.keywords))
 
     def draw_chat_graph(self):
         plt.show()
 
     def animate(self, i):
         if not self.chat.is_alive():
-            print("완료되었습니다.")
+            print("Completed.")
             self.ani.pause()
             return
 
@@ -39,7 +38,7 @@ class graph_painter:
             return
 
         score = self.getHighlightScore(items)
-        # 하이라이트 스코어는 (채팅 수 + 키워드가 일치한 수) 만큼으로 한다.
+        # Highlight score = (# of chat + # of keywords match)
         self.x.append(to_time(items[0].elapsedTime))
         self.y_highlight_score.append(score)
         avg = self.acc // self.count
