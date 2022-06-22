@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(['youtube_chat_analyzer.py'],
-             pathex=['C:\\Users\\manta\\Desktop\\project\\python\\kirinukiHighlightExtractor_youtube'],
+             pathex=['C:\\Users\\manta\\Desktop\\project\\python\\kirinukiHighlightExtractor_youtube'], # Please replace this value into your own directory
              binaries=[],
              datas=[],
              hiddenimports=[],
