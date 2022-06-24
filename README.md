@@ -2,8 +2,6 @@
 YouTube Chat Analyzer analyze chat and draw graph base on how people chat rapidly and whether they typed words like 'YABE', 'LOL', 'LMAO' and so on.
 This program made for helping 'kirinuki' who doesn't have time to watch whole YouTube video.
 <br/>
-## Demo
-![alt](demo.png)
 <br/>
 ## License
 
